@@ -2,8 +2,6 @@
 
 namespace Database\Seeders;
 
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-
 use App\Models\Owner;
 use Illuminate\Database\Seeder;
 use App\Models\Cat;
@@ -19,8 +17,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-
-
         User::truncate();
         Breed::truncate();
         Owner::truncate();
@@ -62,7 +58,6 @@ class DatabaseSeeder extends Seeder
                 "height" => 151
             ]
         ]);
-
 
         $cat_1 = new Cat;
         $cat_1->name = "Milica";

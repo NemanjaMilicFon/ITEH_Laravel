@@ -30,9 +30,11 @@ Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
 
 Route::group(['middleware' => ['auth:sanctum']], function () {
+
     Route::get('/profile', function (Request $request) {
         return auth()->user();
     });
+
     Route::resource('breeds', BreedController::class)->only(['update', 'store', 'destroy']);
     Route::resource('owners', OwnerController::class)->only(['store', 'destroy']);
     Route::resource('cats', CatController::class)->only(['destroy']);

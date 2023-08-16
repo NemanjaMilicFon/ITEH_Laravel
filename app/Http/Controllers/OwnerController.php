@@ -85,7 +85,7 @@ class OwnerController extends Controller
         $owner = Owner::where('id', $ownerID)->delete();
         return response()->json([
             "success" => true,
-            "message" => "Body Type deleted successfully.",
+            "message" => "Data deleted successfully.",
             "data" => $owner
         ]);
     }
