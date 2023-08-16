@@ -70,40 +70,6 @@ class BreedController extends Controller
     }
 
 
-    //PUT/PATCH
-    //localhost:8000/api/breeds/{breedID}
-    //BODY = Breed Model
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Breed  $breed
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Breed $breed)
-    {
-        $input = $request->all();
-        $validator = Validator::make($input, [
-            'name' => 'required|string',
-            'originCity' => 'required|string',
-            'characteristics' => 'required|string',
-        ]);
-        if ($validator->fails()) {
-            return $this->sendError('Validation Error.', $validator->errors());
-        }
-        $breed->name = $input['name'];
-        $breed->originCity = $input['originCity'];
-        $breed->characteristics = $input['characteristics'];
-        $breed->save();
-        return response()->json([
-            "success" => true,
-            "message" => "Breed updated successfully.",
-            "data" => $breed
-        ]);
-    }
-
-
     //DELETE
     //localhost:8000/api/breeds/{breedID}
     //NO BODY
