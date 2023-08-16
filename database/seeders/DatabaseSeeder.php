@@ -32,17 +32,17 @@ class DatabaseSeeder extends Seeder
             [
                 "name" => "Sijamska",
                 "originCity" => "Siamese",
-                "characteristics" => "Sijamske macke su debele i imaju dugacku dlaku"
+                "characteristics" => "Sijamske macke su debele i imaju dugacku dlaku obicno zute boje"
             ],
             [
                 "name" => "Domaca",
                 "originCity" => "Beograd",
-                "characteristics" => "Domaca macka je vrsta macke koju vidjate po domacinstvima."
+                "characteristics" => "Domaca macka je vrsta macke koju vidjamo po kucama."
             ],
             [
                 "name" => "Kratkodlaka",
                 "originCity" => "Paris",
-                "characteristics" => "Ovo je vrsta koja ima jako kratku dlaku."
+                "characteristics" => "Ovo je vrsta koja ima jako kratku i cvrstu dlaku."
             ]
         ]);
 
